@@ -16,7 +16,7 @@ with open('parameters.json', 'r') as f:
 conn = pyodbc.connect(
     'Driver={ODBC Driver 17 for SQL Server};'
     'Server='+(config['Server'])+';'
-    'Database=GCAAssetMGMT;'
+    'Database=SomeSchoolAssetMGMT;'
     'UID='+(config['UID'])+';'
     'PWD='+(config['PWD'])+';'
 )
