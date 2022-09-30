@@ -6,7 +6,7 @@ cwURL = 'https://api-na.myconnectwise.net/v2021_3/apis/3.0/'
 cwDocURL = 'https://cloud.na.myconnectwise.net/v4_6_development/apis/3.0'
 cwAURL = 'https://sca-atl.hostedrmm.com/cwa/api/v1/'
 cwTEURL = 'https://api-na.myconnectwise.net/v2021_3/apis/3.0/time/entries'
-cwAUTH = {'Authorization':'Basic c2NhYXRsKzVIUE9RcXQ3N0tnTkNyQXA6VFRMTlZpb2UyM2dGZjhjTA==', 'clientId':'7f5b88ef-40ef-47ed-ad81-a2fadfab69fe'}
+cwAUTH = {'Authorization':'Basic <token>', 'clientId':'<clientid>'}
 
 
 def getcwaHEADER():
