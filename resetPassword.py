@@ -16,7 +16,7 @@ with open('parameters.json', 'r') as f:
 # conn = pyodbc.connect(
 #     'Driver={ODBC Driver 17 for SQL Server};'
 #     'Server='+(config['Server'])+';'
-#     'Database=GCAAssetMGMT;'
+#     'Database=SomeSchoolAssetMGMT;'
 #     'UID='+(config['UID'])+';'
 #     'PWD='+(config['PWD'])+';'
 # )
@@ -34,7 +34,7 @@ with open('parameters.json', 'r') as f:
 #         print("failed")
 
 
-# staffTopsquery = f"exec GCAAssetMGMT_2_0.Ship.uspStaffKitDeployPWsToReset"
+# staffTopsquery = f"exec SomeSchoolAssetMGMT_2_0.Ship.uspStaffKitDeployPWsToReset"
 # staffTops = pd.read_sql(staffTopsquery , conn)
 
 TENANT_ID = config['tenant_id'] 
@@ -83,7 +83,7 @@ if result is None:
 #     print(resp.status_code)
 
 
-#user = "sca_resets@georgiacyber.online"
+#user = ""
 # data = """{"passwordProfile": {"forceChangePasswordNextSignIn": 'TRUE'}}"""
 # headers= {'Accept': 'application/json', 'Authorization': 'Bearer '+result['access_token'], 'Content-Type': 'application/json'}
 # resp = requests.patch(f'{ENDPOINT}/users/{user}', headers=headers, data=data)
@@ -95,7 +95,7 @@ if result is None:
 
 
 
-user = "sca_resets@georgiacyber.online"
+user = ""
 if 'access_token' in result:
     result = requests.get(f'{ENDPOINT}/users/{user}', headers={'Authorization': 'Bearer ' + result['access_token']})
     result.raise_for_status()
